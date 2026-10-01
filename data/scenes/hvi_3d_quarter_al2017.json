@@ -1,0 +1,176 @@
+{
+  "Domain": {
+    "particleRadius": 0.025,
+    "supportRadiusFactor": 6.0,
+    "planeStrain": false,
+    "symmetryPlanes": "yz",
+    "boundary": "open"
+  },
+  "Time": {
+    "CFL": 0.3,
+    "duration": 0.008,
+    "maxSteps": 200000,
+    "stepsPerRenderUpdate": 1,
+    "pairSoundSpeed": "off"
+  },
+  "Erosion": {
+    "mode": "cap",
+    "minVolumeRatio": 0.3,
+    "maxVolumeRatio": 1.5
+  },
+  "Solver": {
+    "type": "hypoElastic",
+    "viscosity": 0.0,
+    "allowNegativePressure": true,
+    "dampingCoefficient": 0.0,
+    "kernelCorrection": false,
+    "bulkViscosity": {
+      "quadratic": 1.5,
+      "lengthScale": "dx0"
+    },
+    "artificialViscosity": {
+      "alpha": 0.1,
+      "beta": 0.0
+    }
+  },
+  "Materials": [
+    {
+      "name": "projectile",
+      "library": "al2017_t4"
+    },
+    {
+      "name": "disc",
+      "library": "al2017_t4",
+      "strength": null
+    }
+  ],
+  "Load": {
+    "gravitation": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "Diffusion": {
+    "delta": 0.1,
+    "pairs": "sameMaterial"
+  },
+  "Shifting": {
+    "enabled": true,
+    "mode": "colle",
+    "maMode": "fixed",
+    "maFixed": 0.05,
+    "R": 0.2,
+    "n": 4,
+    "maxShift": 0.005,
+    "aleMomentum": true,
+    "aleHistory": true
+  },
+  "Hourglass": {
+    "alpha": 0.0,
+    "superTimeStepping": {
+      "mode": "subcycle"
+    }
+  },
+  "Output": {
+    "netcdf": true,
+    "txt": false,
+    "ply": false,
+    "obj": false,
+    "frame": false,
+    "interval": 20,
+    "colorField": "pressure",
+    "cameraMode": "front"
+  },
+  "SolidBlocks": [
+    {
+      "objectId": 0,
+      "material": "projectile",
+      "start": [
+        -3.2,
+        0.025,
+        0.025
+      ],
+      "end": [
+        3.2,
+        3.201,
+        3.201
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "velocity": [
+        6700.0,
+        0.0,
+        0.0
+      ],
+      "density": 2.79e-06,
+      "color": [
+        210,
+        120,
+        60
+      ],
+      "shape": {
+        "type": "sphere",
+        "radius": 3.175,
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "objectId": 1,
+      "material": "disc",
+      "start": [
+        4.0,
+        0.025,
+        0.025
+      ],
+      "end": [
+        6.0,
+        10.001,
+        10.001
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "density": 2.79e-06,
+      "color": [
+        160,
+        160,
+        175
+      ],
+      "shape": {
+        "type": "cylinder",
+        "radius": 10.0,
+        "axis": "x",
+        "center": [
+          5.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ]
+}

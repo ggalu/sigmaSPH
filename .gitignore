@@ -1,0 +1,5 @@
+__pycache__/
+*.xyz
+*.nc
+*.csv
+*.png
