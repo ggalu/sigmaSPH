@@ -3,3 +3,4 @@ __pycache__/
 *.nc
 *.csv
 *.png
+!documentation/figures/*.png
