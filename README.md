@@ -1,5 +1,7 @@
 # sigmaSPH
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23084820.svg)](https://doi.org/10.5281/zenodo.23084820)
+
 ![Debris cloud of a 6.7 km/s impact of an aluminium sphere on a thin aluminium disc](documentation/figures/HVI_4.png)
 
 *The debris cloud of an Al 2017-T4 sphere that has perforated a 2 mm Al 2017-T4 disc at
@@ -72,6 +74,14 @@ mm/ms = m/s).
 
 The comments at the top of each scene file explain its parameters. Some comments
 refer to documents and analysis scripts that are not part of this release.
+
+## Citing sigmaSPH
+
+Every release is archived on Zenodo. To cite sigmaSPH in general, use the DOI
+[10.5281/zenodo.23084820](https://doi.org/10.5281/zenodo.23084820), which always resolves to
+the latest release. If your results depend on one particular release, cite that release's
+own DOI instead; the Zenodo page lists the DOI of each version. `CITATION.cff` holds the
+citation metadata, and GitHub's "Cite this repository" button formats it as APA or BibTeX.
 
 ## Licence
 

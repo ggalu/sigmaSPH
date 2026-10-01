@@ -1,0 +1,36 @@
+# Citation metadata for the public sigmaSPH repository.  GitHub reads it for its "Cite this
+# repository" button, and Zenodo reads it for the record of each release.  release.py
+# rewrites the version and date-released lines with the release being made; the values here
+# are placeholders.  The DOI is Zenodo's concept DOI, which resolves to the latest version.
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "sigmaSPH: a GPU-accelerated SPH solver for fluids and elastic-plastic solids"
+abstract: >-
+  sigmaSPH is a GPU-accelerated Smoothed Particle Hydrodynamics code written in Taichi.
+  It simulates weakly compressible fluids with delta-plus-SPH and hypoelastic-plastic
+  solids at large deformation, in 3D, 2D plane strain and 2D axisymmetry, with
+  Mie-Grueneisen, JWL and Holmquist-Johnson-Cook equations of state, J2 and Johnson-Cook
+  plasticity, and Johnson-Cook, Cocks-Ashby, Holmquist-Johnson-Cook and Grady-Kipp damage.
+authors:
+  - family-names: "Ganzenmüller"
+    given-names: "Georg C."
+    email: georg.ganzenmueller@inatech.uni-freiburg.de
+    orcid: "https://orcid.org/0000-0001-5741-8844"
+    affiliation: >-
+      Institute of Sustainable Systems Engineering (INATECH), University of Freiburg,
+      Freiburg, Germany; Fraunhofer Institute for High-Speed Dynamics,
+      Ernst-Mach-Institut, EMI, Freiburg, Germany
+doi: 10.5281/zenodo.23084820
+repository-code: "https://github.com/ggalu/sigmaSPH"
+license: MIT
+keywords:
+  - smoothed particle hydrodynamics
+  - SPH
+  - GPU
+  - Taichi
+  - solid mechanics
+  - hypervelocity impact
+  - fracture
+version: "v0.1.3"
+date-released: "2026-10-01"
